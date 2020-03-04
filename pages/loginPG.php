@@ -8,16 +8,7 @@
 	</head>
 	<body>
 	<form action="login.php" method="post">
-	<div class="container">
-			<img src="../images/logo.JPG" class="logo">
-			<button class="login" onclick="location.href = 'assetes/html/form.html';" type="button"> Login</button>
-		</div>	
-			<ul>
-			  <li><a href="default.asp">Home</a></li>
-			  <li><a href="news.asp">Local News</a></li>
-			  <li><a href="contact.asp">Contact</a></li>
-			  <li><a href="about.asp">About</a></li>
-			</ul>
+	<?php include("../scripts/navbar-log-sub.php");?>
 	<br>
   <div class="container">
     <label for="uname" style="text-align:center;"><b>Username</b></label>
