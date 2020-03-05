@@ -11,11 +11,13 @@
  $ho_address = $_POST['adress'];
  $ho_email = $_POST['email'];
  $ho_username = $_POST['uname'];
- $ho_pw = $_POST['pword'];
+ //password is hashed
+ $ho_pw = crypt($_POST['pword']);
  $ho_city = $_POST['city'];
  $ho_state = $_POST['state'];
  $ho_zip = $_POST['zip'];
  
+  
  #test echo to see if variables work
  #echo "Username: ".$ho_username;
  #echo "<br>";
