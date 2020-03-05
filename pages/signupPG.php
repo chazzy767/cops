@@ -84,7 +84,7 @@ button:hover {
 </style>
 <body>
 
-<form id="regForm" action="/action_page.php">
+<form id="regForm" action="../scripts/signup-insert.php">
   <h1>SIGN UP FOR A HOUSE CHECK:</h1>
   <h2>please fill in all of the information to confirm you live at the current adress and include any other informatoin you would like us to know about</h2>
   <!-- One "tab" for each step in the form: -->
@@ -103,7 +103,7 @@ button:hover {
     <p><input placeholder="return time" oninput="this.className = ''" name="2:45 pm"></p>
   </div>
   <div class="tab">location:
-    <p><input placeholder="Adress" oninput="this.className = ''" name="adress"></p>
+    <p><input placeholder="Address" oninput="this.className = ''" name="adress"></p>
     <p><input placeholder="city" oninput="this.className = ''" name="city"></p>
     <p><input placeholder="state" oninput="this.className = ''" name="state"></p>
     <p><input placeholder="zip code" oninput="this.className = ''" name="zip"></p>
