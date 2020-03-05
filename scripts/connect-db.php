@@ -8,7 +8,13 @@
  // Check connection
  if (!$conn) {
    die("Connection failed: " . mysqli_connect_error());
- }
- //lets user know of successful connection
- echo "Success!";
+ } elseif (!mysqli_select_db($conn, 'cmczerny')){
+	 //db not selected error
+	 echo "Database not selected";
+ } else
+ {
+	 //lets user know of successful connection
+	 echo "Connected to COPS DB";
+	 echo "<br>";
+ } 
 ?>

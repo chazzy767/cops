@@ -84,7 +84,7 @@ button:hover {
 </style>
 <body>
 
-<form id="regForm" action="../scripts/signup-insert.php" method=post>
+<form id="regForm" action="../scripts/signup-insert.php" method="post">
   <h1>SIGN UP FOR A HOUSE CHECK:</h1>
   <h2>please fill in all of the information to confirm you live at the current adress and include any other informatoin you would like us to know about</h2>
   <!-- One "tab" for each step in the form: -->

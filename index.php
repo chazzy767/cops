@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Cops for House Checks</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/stylesheet.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<?php include("scripts/head.php"); ?>
 	</head>
 	<body>
 		<?php include("scripts/navbar-logo.php"); ?>
