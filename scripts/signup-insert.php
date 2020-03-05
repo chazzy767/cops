@@ -1,9 +1,8 @@
 <?php
  //connects to our OU COPS db
  include("../scripts/connect-db.php");
- 
- //formatting for echos
-
+ //add functions php file
+ include("php-functions.php");
  
  //link php variables to form variables
  $ho_fname = $_POST['fname'];
@@ -17,7 +16,6 @@
  $ho_state = $_POST['state'];
  $ho_zip = $_POST['zip'];
  
-  
  #test echo to see if variables work
  #echo "Username: ".$ho_username;
  #echo "<br>";
@@ -35,17 +33,14 @@
 	 echo "<br>";
 	 echo "Closing connection and redirecting...";
 	 //redirects back to our homepage
-     header("Refresh:3, url=http://www.secs.oakland.edu/~cmczerny/cops/",
-	 true, 303);
+     redirectHome();
      exit ;
  }else{ //else if query is executed, the following runs
 	 echo "<br>";
 	 echo "Data inserted";
      echo "<br>";
 	 echo "Closing connection and redirecting...";
-	 //redirects back to our homepage
-     header("Refresh:3, url=http://www.secs.oakland.edu/~cmczerny/cops/",
-	 true, 303);
-     exit ;
+	 redirectHome();
+     exit;
  }
 ?>
