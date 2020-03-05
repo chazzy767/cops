@@ -82,6 +82,9 @@ button:hover {
   background-color: #4CAF50;
 }
 </style>
+<head>
+ <?php include("../scripts/sub-head.php"); ?>
+</head>
 <body>
 
 <form id="regForm" action="../scripts/signup-insert.php" method="post">

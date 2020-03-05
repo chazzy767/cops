@@ -5,6 +5,8 @@
 			<button class="login" onclick="location.href = \'pages/loginPG.php\';" type="button"> Login</button>
 			<br>
 			<button class="Signup" onclick="location.href = \'pages/signupPG.php\';" type="button"> Sign Up</button>
+			<br>
+			<button class="Admin" onclick="location.href = \'assetes/html/adminUI.php\';" type="button"> Admin Login</button>
 		</div>	
 			<ul>
 			  <li><a href="index.php">Home</a></li>
