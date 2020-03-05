@@ -65,6 +65,7 @@ li a:hover {
 	width:65px;
 	height:55px;
 	font-size:13px;
+	border-radius:25px;
 }
 .Signup{
 	grid-column: 10;
