@@ -81,14 +81,10 @@ li a:hover {
 	grid-row: 3;
 }
 .psw{
-<<<<<<< HEAD
 	grid-column: 5;
 	grid-row: 4;
 	color:white;
 	margin-left: 25px;
-=======
-	grid-column:2/3;
->>>>>>> ab07cc45d0e318da2e053994410f805a247e118c
 }
 .userNav{
 	grid-column: 1/3;
