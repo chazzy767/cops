@@ -11,6 +11,8 @@
  ('$_POST[fname]', '$_POST[lname]', '$_POST[adress]', '$_POST[email]', 
  '$_POST[uname]', '$_POST[city]', '$_POST[state]', '$_POST[zip]')";
  echo "Closing connection and redirecting...";
+ 
+ //redirects back to our homepage
  header("Refresh:2, url=http://www.secs.oakland.edu/~cmczerny/cops/", true, 303);
  exit ;
 ?>

@@ -9,5 +9,6 @@
  if (!$conn) {
    die("Connection failed: " . mysqli_connect_error());
  }
+ //lets user know of successful connection
  echo "Success!";
 ?>
