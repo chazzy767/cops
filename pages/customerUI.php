@@ -7,20 +7,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	</head>
 	<body>
-		<div class="container">
-			<img src="../images/logo.JPG" class="logo">
-			<button class="Signup" onclick="location.href = 'assetes/html/profileEdit.html';" type="button"> Profile</button>
-			<button class="login" onclick="location.href = '../../homePG.html';" type="button"> Log Off</button>
-			<br>
-		</div>	
-			<ul>
+	<ul>
 			  <li><a href="default.asp">Home</a></li>
 			  <li><a href="news.asp">Local News</a></li>
 			  <li><a href="contact.asp">Contact</a></li>
 			  <li><a href="about.asp">About</a></li>
 			</ul>
 		<div class="container">
-			<div class="mainTXT">
+			<img src="../images/logo.JPG" class="logo">
+			<button class="Signup" onclick="location.href = 'assetes/html/profileEdit.html';" type="button"> Profile</button>
+			<button class="login" onclick="location.href = '../../homePG.html';" type="button"> Log Off</button>
+			<br>
+		</div>	
+			
+		<div class="container">
+			<div class="mainTXT3">
 				<h1> Welcome Back! </h1> <p> We hope you are having 
 				an amazing vacation while we make sure your house is safe!</p>
 				<p>Your House was most recently checked on:</p>
