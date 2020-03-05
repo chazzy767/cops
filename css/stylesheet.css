@@ -80,7 +80,7 @@ li a:hover {
 	grid-row: 3;
 }
 .psw{
-	grid-coloum:2/3;
+	grid-column:2/3;
 }
 .userNav{
 	grid-column: 1/3;
