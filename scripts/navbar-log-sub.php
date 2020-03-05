@@ -7,7 +7,7 @@
 			<button class="Signup" onclick="location.href = \'../pages/signupPG.php\';" type="button"> Sign Up</button>
 		</div>	
 			<ul>
-			  <li><a href="default.asp">Home</a></li>
+			  <li><a href="../index.php">Home</a></li>
 			  <li><a href="news.asp">Local News</a></li>
 			  <li><a href="contact.asp">Contact</a></li>
 			  <li><a href="about.asp">About</a></li>
