@@ -12,6 +12,8 @@
 			<button class="login" onclick="location.href = 'assetes/html/loginPG.html';" type="button"> Login</button>
 			<br>
 			<button class="Signup" onclick="location.href = 'assetes/html/signupPG.html';" type="button"> Sign Up</button>
+			<br>
+			<button class="Admin" onclick="location.href = 'assetes/html/adminUI.html';" type="button"> Admin Login</button>
 		</div>	
 		<ul>
 			  <li><a href="default.asp">Home</a></li>
