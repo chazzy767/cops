@@ -5,9 +5,7 @@
  include("php-functions.php");
  
  $myusername = $_POST['uname'];
- $mypassword = $_POST['psw'];
- echo "Unencrypted pw: ".$mypassword."<br>";
- 
+
  //Selects password from row w/ entered username
  $sql = "SELECT ho_pw_hash FROM Homeowner WHERE ho_username = '{$myusername}'";
  $query = mysqli_query($conn,$sql);
@@ -15,17 +13,16 @@
  
  //Extracts the actual pw string
  $fetched_pw = $result['ho_pw_hash'];
- 
- //Displays pw from query
- echo "Fetched pw: ".$fetched_pw."<br>";
- 
- //Encrypts entered pw to compare
- $mypassword = crypt($mypassword,$fetched_pw);
- 
- echo "<br>";
- echo "Encryped entered pw: ".$mypassword."<br>";
+ $mypassword = crypt($_POST['psw'],$fetched_pw);
  
  //Compares passwords
- checkPWs();
+  if (strcmp($mypassword,$fetched_pw)===0){
+	 echo "Login successful. Redirecting...";
+	 session_start();
+	 $_SESSION["session_username"] = $myusername;
+	 redirectHome();
+ } else{
+	 echo "Login unsuccessful.";
+ }
  
 ?>
