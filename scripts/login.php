@@ -20,7 +20,8 @@
 	 echo "Login successful. Redirecting...";
 	 session_start();
 	 $_SESSION["session_username"] = $myusername;
-	 redirectHome();
+	 header("Refresh:3, url=http://www.secs.oakland.edu/~cmczerny/cops/pages/customerUI.php",
+	 true, 303);
  } else{
 	 echo "Login unsuccessful.";
  }
