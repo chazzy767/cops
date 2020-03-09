@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<!--
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#regForm {
+  background-color: navy;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+  color: white;
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+</style>
+-->
+<body>
+
+<form id="regForm" action="/action_page.php">
+  <h1>perform house check</h1>
+  <h2>house checkers form</h2>
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab"><h2>time and date</h2>
+     <p><input placeholder="time you performed house check" oninput="this.className = ''" name="checktime"></p>
+    <p><input placeholder="date you performed house check" oninput="this.className = ''" name="checkdate"></p>
+    <p><input placeholder="who performed this house check" oninput="this.className = ''" name="checkername"></p>
+    
+    
+  </div>
+  
+    <div class="tab"><h2>verify that everything in the residents form was corect</h2>
+    <p><input placeholder="lights on or off" oninput="this.className = ''" name="checklights"></p>
+    <p><input placeholder="neighbors apear to be home" oninput="this.className = ''" name="yes or no"></p>
+    <p><input placeholder="return date" oninput="this.className = ''" name="mm/dd/yyyy"></p>
+    <p><input placeholder="return time" oninput="this.className = ''" name="2:45 pm"></p>
+  </div>
+  <div class="tab">location:
+    <p><input placeholder="Adress" oninput="this.className = ''" name="adress"></p>
+    <p><input placeholder="city" oninput="this.className = ''" name="city"></p>
+    <p><input placeholder="state" oninput="this.className = ''" name="state"></p>
+    <p><input placeholder="zip code" oninput="this.className = ''" name="zip"></p>
+  </div>
+
+
+
+  <div class="tab"><h2>Login Info:</h2>
+    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+    <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+  </div>
+
+  <div style="overflow:auto;">
+    <div style="float:bottom;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    
+  </div>
+  <h1>location</h1>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.889643516064!2d-83.34759428424452!3d42.684879922518455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824960e730255a7%3A0x54f1edf95cd1d56d!2s2914%20Shawnee%20Ln%2C%20Waterford%20Twp%2C%20MI%2048329!5e0!3m2!1sen!2sus!4v1583254378213!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+<iframe src="https://www.facebook.com/groups/?vertical=groups_discover_us&from_ad=true&ref=sem&kpid=go_1904363416_71967890553_350983794675_kwd-300931552695_c_" width="600" height="450"> </iframe>
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+  type="text/javascript"></script>
+</form>
+
+<script>
+var currentTab = 0; 
+showTab(currentTab); 
+
+function showTab(n) {
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+ 
+
+
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+ 
+
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  var x = document.getElementsByClassName("tab");
+  if (n == 1 && !validateForm()) return false;
+  x[currentTab].style.display = "none";
+  currentTab = currentTab + n;
+  if (currentTab >= x.length) {
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  showTab(currentTab);
+}
+
+function validateForm() {
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  for (i = 0; i < y.length; i++) {
+    if (y[i].value == "") {
+      y[i].className += " invalid";
+      valid = false;
+    }
+  }
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid;
+}
+
+function fixStepIndicator(n) {
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  x[n].className += " active";
+}
+</script>
+
+</body>
+</html>
