@@ -19,7 +19,7 @@
 				</p2>
 				<button class="" onclick="location.href = '../../homePG.html';" type="button"> Submit House Check</button>
 			</div>
-
+		<link href="https://fonts.googleapis.com/css?family=Raleway" >
 		<div class="OfficerNav">
 			<a href="../html/history.html">Previous House Checks</a>
 		</div>
