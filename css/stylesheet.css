@@ -87,6 +87,15 @@ li a:hover {
 	font-size:12px;
 	border-radius:15px;
 }
+.logoff{
+	grid-column: 10;
+	grid-row: 1;
+	color:blue;
+	width:65px;
+	height:55px;
+	font-size:12px;
+	border-radius:15px;
+}
 .Signup{
 	grid-column: 10;
 	grid-row: 1;

@@ -4,7 +4,7 @@
 		<?php include("../scripts/sub-head.php"); ?>
 	</head>
 	<body>
-	 <?php include("../scripts/navbar-log-sub.php"); ?>	
+	 <?php include("../scripts/navbar-log-sub-user.php"); ?>	
 		<div class="container">
 			<div class="mainTXT3">
 				<h1> Welcome Back, <?php echo $_SESSION["session_username"];?> ! </h1>
