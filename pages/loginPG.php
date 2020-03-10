@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php include("../scripts/sub-head.php"); ?>
+	 <title>Login</title>
+	 <?php include("../scripts/sub-head.php"); ?>
 	</head>
 	<body>
 	<form action="../scripts/login.php" method="post">
