@@ -2,7 +2,7 @@
 //This PHP file generates the navbar for the index page only!!! due to relative paths
  echo ' <ul>
 		  <li><a href="index.php">Home</a></li>
-		  <li onclick="location.href='https://cityofpleasantridge.org/news/';"> Local News </li>
+		  <li><a href="">Local News</a></li>
 		  <li><a href="">Contact</a></li>
 		  <li><a href="">About</a></li>
 		</ul>
