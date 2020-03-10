@@ -15,6 +15,6 @@
  {
 	 //lets user know of successful connection
 	 echo "Connected to COPS DB";
-	 echo "<br>";
+	 echo "<br><br>";
  } 
 ?>

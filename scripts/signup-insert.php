@@ -32,6 +32,7 @@
 	 echo "Data not inserted";
 	 echo "<br>";
 	 echo "Closing connection and redirecting...";
+	 mysqli_close($conn)
 	 //redirects back to our homepage
      redirectHome();
      exit ;
@@ -40,6 +41,7 @@
 	 echo "Data inserted";
      echo "<br>";
 	 echo "Closing connection and redirecting...";
+	 mysqli_close($conn)
 	 redirectHome();
      exit;
  }
