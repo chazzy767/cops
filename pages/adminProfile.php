@@ -7,18 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	</head>
 	<body>
-		<div class="container">
-			<img src="../images/logo.JPG" class="logo">
-			<button class="Signup" onclick="location.href = 'assetes/html/profileEdit.html';" type="button"> Profile</button>
-			<button class="login" onclick="location.href = '../../homePG.html';" type="button"> Log Off</button>
-			<br>
-		</div>	
-			<ul>
-			  <li><a href="default.asp">Home</a></li>
-			  <li> <a href="https://cityofpleasantridge.org/news/"> Local News</li>
-			  <li><a href="contact.asp">Contact</a></li>
-			  <li><a href="about.asp">About</a></li>
-			</ul>
+		 <?php include("../scripts/navbar-log-sub-user.php"); ?>
 		<div class="container">
 			<div class="mainTXT2">
 				<h1> Welcome Back Officer! </h1> <p> Thank you for keeping our residents' homes safe!</p>
