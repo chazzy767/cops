@@ -4,9 +4,10 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 <body>
-	<?php include("scripts/navbar-logo.php"); ?>
-	<h1>About</h1>
-	<h2>About the project</h2>
+	<?php include("../scripts/navbar-log-sub.php"); ?>
+	<div class="container">
+	<div class="meet"> 
+	<h2>What is House Check for Cops?</h2>
 	<p>The house check app (working title) is an app for homeowners that gives them peace of mind when they are away on vacation. with this app, homeowners can rest easy knowing that their house is safe and being looked after while they are away. with a few simple clicks, the user can sign up for a house check. just enter your information and the days that you will be gone, and at some point in that duration, one of our registered house checkers will stop by to make sure your house has been left untouched since you've been gone.</p>
 	<h3>how it works</h3>
 	<p>when you first make your account, you will be promted to enter your personal information and address. once logged in, you can sign up for a house check. this will take you to a form to fill out where you will fill in any information about the house you want the house checker to know about. enter the dates you will be leaving and returning, and then you are free to go on vacation. A house checker will check your house peiodicall while you are away to make sure nothng has happened since you left.</p>
@@ -14,5 +15,7 @@
 	<p>in the event the house checker notices something has gone wrong, they will try to contact the homeowner and verify that it is ok. if the house checker cannot, they will contact the authorities and inform them that the house has been tampered with.</p>
 	<h2>about the creators of the app</h2>
 	<p>this is where we put the description of the us</p>
+	</div>
+	</div> 
 	</body>
 </html>

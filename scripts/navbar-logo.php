@@ -3,8 +3,8 @@
  echo ' <ul>
 		  <li><a href="index.php">Home</a></li>
 		  <li><a href="https://cityofpleasantridge.org/news/">News</a></li>
-		  <li><a href="../pages/contactPG.php">Contact</a></li>
-		  <li><a href="../pages/about.php">About</a></li>
+		  <li><a href="pages/contactPG.php">Contact</a></li>
+		  <li><a href="pages/about.php">About</a></li>
 		</ul>
 		<div class="container">
 	
