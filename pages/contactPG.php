@@ -14,7 +14,7 @@
 			  <li><a href="about.asp">About</a></li>
 			</ul>
 			<div class="container"> 
-				<img src="../images/logo.JPG" class="logo">
+				<img src="../images/logo.jpg" class="logo">
 				<button class="Signup" onclick="location.href = 'assetes/html/profileEdit.html';" type="button"> Profile</button>
 				<button class="login" onclick="location.href = '../../homePG.html';" type="button"> Log Off</button>
 				<br>
