@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #D3D3D3;
+  background-color: #333;
 }
 
 #regForm {
@@ -82,11 +82,14 @@ button:hover {
   background-color: #4CAF50;
 }
 </style>
+<head>
+ <?php include("../scripts/sub-head.php"); ?>
+</head>
 <body>
 
 <form id="regForm" action="../scripts/signup-insert.php" method="post">
   <h1>SIGN UP FOR A HOUSE CHECK:</h1>
-  <h2>please fill in all of the information to confirm you live at the current adress and include any other informatoin you would like us to know about</h2>
+  <h2>Please fill in all of the information to confirm you live at the current address and include any other informatoin you would like us to know about</h2>
   <!-- One "tab" for each step in the form: -->
   <div class="tab">Name:
      <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
