@@ -58,7 +58,7 @@
  //sql to insert into housecheck table
  $sql_housecheck = "INSERT INTO Housecheck (homeowner_id,
  leave_date,return_date,leave_time,return_time) VALUES 
- ('$fetched_id','$chk_l_date','$chk_l_time','$chk_r_date',
+ ('$fetched_id','$chk_l_date','$chk_r_date','$chk_l_time',
  '$chk_r_time')";
  
  if(!mysqli_query($conn,$sql_housecheck)){
