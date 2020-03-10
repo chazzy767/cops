@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <body>
-	<?php include("scripts/navbar-logo.php"); ?>
+	
 	<h1>About</h1>
 	<h2>About the project</h2>
 	<p>The house check app (working title) is an app for homeowners that gives them peace of mind when they are away on vacation. with this app, homeowners can rest easy knowing that their house is safe and being looked after while they are away. with a few simple clicks, the user can sign up for a house check. just enter your information and the days that you will be gone, and at some point in that duration, one of our registered house checkers will stop by to make sure your house has been left untouched since you've been gone.</p>
