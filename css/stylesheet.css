@@ -195,10 +195,7 @@ p2{
 	grid-row: 7;
 }
 
-.add{
-	color:white;
 
-}
 .meet{
 	grid-column: span 10;
 	grid-row: 3/6;
