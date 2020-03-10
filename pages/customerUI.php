@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+	 <title>User</title>
 		<?php include("../scripts/sub-head.php"); ?>
 	</head>
 	<body>

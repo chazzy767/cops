@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+<head>
+ <title>About</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+ <?php include("../scripts/sub-head.php");?>
+</head> 
 <body>
 	<?php include("../scripts/navbar-log-sub.php"); ?>
 	<div class="container">
