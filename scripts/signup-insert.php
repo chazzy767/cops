@@ -29,20 +29,22 @@
  
  //checks to see if query was executed/inserted
  if(!mysqli_query($conn,$sql)){
-	 echo "Data not inserted";
+	 echo "Housecheck info not inserted";
 	 echo "<br>";
-	 echo "Closing connection and redirecting...";
-	 mysqli_close($conn)
-	 //redirects back to our homepage
-     redirectHome();
-     exit ;
  }else{ //else if query is executed, the following runs
 	 echo "<br>";
-	 echo "Data inserted";
+	 echo "Housecheck info inserted";
      echo "<br>";
-	 echo "Closing connection and redirecting...";
-	 mysqli_close($conn)
-	 redirectHome();
-     exit;
  }
+ 
+ //finds the user id for the new account
+ $sql2 = "SELECT homeowner_id FROM Homeowner WHERE ho_username = 
+ '{$ho_username}'";
+ $query2 = mysqli_query($conn,$sql2);
+ $id_result = mysqli_fetch_assoc($query2);
+ 
+ $fetched_id = $id_result['homeowner_id'];
+ 
+ //echoes user id
+ echo "User ID: ".$fetched_id;
 ?>
