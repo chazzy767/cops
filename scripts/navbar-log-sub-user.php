@@ -8,7 +8,7 @@
 			</ul>
 	<div class="container">
 			<img src="../images/logo.jpg" class="logo">
-			<button class="logoff" onclick="location.href = \'../pages/loginPG.php\';" type="button"> Log Off</button>
+			<button class="logoff" onclick="location.href = \'../scripts/logoff.php\';" type="button"> Log Off</button>
 			<br>
 		</div>	
 

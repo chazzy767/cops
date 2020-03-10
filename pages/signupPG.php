@@ -110,10 +110,10 @@ button:hover {
   </div>
   
     <div class="tab">Date of Residence's Absence
-    <p><input placeholder="leave date" oninput="this.className = ''" name="mm/dd/yyyy"></p>
-    <p><input placeholder="leave time" oninput="this.className = ''" name="12:00 am"></p>
-    <p><input placeholder="return date" oninput="this.className = ''" name="mm/dd/yyyy"></p>
-    <p><input placeholder="return time" oninput="this.className = ''" name="2:45 pm"></p>
+    <p><input placeholder="leave date" oninput="this.className = ''" name="leaveDate"></p>
+    <p><input placeholder="leave time" oninput="this.className = ''" name="leaveTime"></p>
+    <p><input placeholder="return date" oninput="this.className = ''" name="returnDate"></p>
+    <p><input placeholder="return time" oninput="this.className = ''" name="returnTime"></p>
   </div>
   <div class="tab">location:
     <p><input placeholder="Address" oninput="this.className = ''" name="adress"></p>
