@@ -8,7 +8,7 @@
 		</div>	
 			<ul>
 			  <li><a href="../index.php">Home</a></li>
-			  <li><a href="">Local News</a></li>
+			  <li><a href="https://cityofpleasantridge.org/news/">Local News</a></li>
 			  <li><a href="">Contact</a></li>
 			  <li><a href="">About</a></li>
 			</ul>';

@@ -15,7 +15,7 @@
 		</div>	
 			<ul>
 			  <li><a href="default.asp">Home</a></li>
-			  <li onclick="location.href='https://cityofpleasantridge.org/news/';"> Local News </li>
+			  <li> <a href="https://cityofpleasantridge.org/news/"> Local News</li>
 			  <li><a href="contact.asp">Contact</a></li>
 			  <li><a href="about.asp">About</a></li>
 			</ul>
