@@ -16,6 +16,11 @@
 			<div class="container"> 
 				<img src="../images/logo.JPG" class="logo">
 				<button class="login" onclick="location.href = '../../homePG.html';" type="button"> Log In</button>
+
+				<img src="../images/logo.jpg" class="logo">
+				<button class="Signup" onclick="location.href = 'assetes/html/profileEdit.html';" type="button"> Profile</button>
+				<button class="login" onclick="location.href = '../../homePG.html';" type="button"> Log Off</button>
+
 				<br>
 			</div> 
 			<div class="container">
