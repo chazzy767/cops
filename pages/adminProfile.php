@@ -15,7 +15,10 @@
 
 			echo "<table>
 			<tr>
-			<th>ID</th>
+			<th>User ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Address</th>
 			<th>Date Created</th>
 			<th>Leave Date</th>
 			<th>Return Date</th>
@@ -25,6 +28,9 @@
 			{
 			echo "<tr>";
 			echo "<td>" . $row['homeowner_id'] . "</td>";
+			echo "<td>name</td>";
+			echo "<td>name</td>";
+			echo "<td>address</td>";
 			echo "<td>" . $row['date_created'] . "</td>";
 			echo "<td>" . $row['leave_date'] . "</td>";
 			echo "<td>" . $row['return_date'] . "</td>";
