@@ -18,7 +18,8 @@
 				   //This creates the table of unchecked housechecks
 					$sql = "SELECT * FROM Housecheck
 					INNER JOIN Homeowner
-					ON Housecheck.homeowner_id=Homeowner.homeowner_id";
+					ON Housecheck.homeowner_id=Homeowner.homeowner_id
+					WHERE Housecheck.chk_value=\"no\"";
 					$result = mysqli_query($conn,$sql);
 
 					echo "<table>
