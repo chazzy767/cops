@@ -16,12 +16,13 @@
 				<p>Here are a list of homes that need to be checked today:</p>
 				   <?php
 				   //This creates the table of unchecked housechecks
-					$sql = "SELECT * FROM Housecheck";
+					$sql = "SELECT * FROM Housecheck
+					INNER JOIN Homeowner
+					ON Housecheck.homeowner_id=Homeowner.homeowner_id";
 					$result = mysqli_query($conn,$sql);
 
 					echo "<table>
 					<tr>
-					<th>User ID</th>
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Address</th>
@@ -33,10 +34,9 @@
 					while($row = mysqli_fetch_array($result))
 					{
 					echo "<tr>";
-					echo "<td>" . $row['homeowner_id'] . "</td>";
-					echo "<td>name</td>";
-					echo "<td>name</td>";
-					echo "<td>address</td>";
+					echo "<td>" . $row['ho_fname'] . "</td>";
+					echo "<td>" . $row['ho_lname'] . "</td>";
+					echo "<td>" . $row['ho_address'] . "</td>";
 					echo "<td>" . $row['date_created'] . "</td>";
 					echo "<td>" . $row['leave_date'] . "</td>";
 					echo "<td>" . $row['return_date'] . "</td>";
