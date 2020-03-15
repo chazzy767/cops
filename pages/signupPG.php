@@ -198,8 +198,8 @@ function validateForm() {
   
     
   
-  //validates email to check for "@" and "."
-  if ((a.value.indexOf('@') > -1)&&(a.value.indexOf('.') > -1)){
+  //validates email to check for "@" and "." and at least length of 7
+  if ((a.value.indexOf('@') > -1)&&(a.value.indexOf('.') > -1)&&(a.value.length > 6)){
 	  valid = true;
   } else {
 	  valid = false;
@@ -221,6 +221,7 @@ function validateForm() {
       valid = false;
     }
   }
+
   
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
