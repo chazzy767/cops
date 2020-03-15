@@ -94,7 +94,8 @@ button:hover {
 }
 </style>
 <head>
-<?php include("../scripts/sub-head.php"); ?>
+ <title>Sign Up</title>
+ <?php include("../scripts/sub-head.php"); ?>
 </head>
 <body>
 	<?php include("../scripts/navbar-log-sub-user.php"); ?>	
