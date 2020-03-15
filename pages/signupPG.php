@@ -110,10 +110,10 @@ button:hover {
   </div>
   
    <div class="tab">Date of Residence's Absence
-    <p><input placeholder="Leave Date (YYYY-MM-DD)" oninput="this.className = ''" name="leaveDate"></p>
-    <p><input placeholder="Leave Time (HH-MM-SS)" oninput="this.className = ''" name="leaveTime"></p>
-    <p><input placeholder="Return Date (YYYY-MM-DD)" oninput="this.className = ''" name="returnDate"></p>
-    <p><input placeholder="Return Time (HH-MM-SS)" oninput="this.className = ''" name="returnTime"></p>
+    <p><input id="inputLDate" placeholder="Leave Date (YYYY-MM-DD)" oninput="this.className = ''" name="leaveDate"></p>
+    <p><input id="inputLTime" placeholder="Leave Time (HH-MM-SS)" oninput="this.className = ''" name="leaveTime"></p>
+    <p><input id="inputRDate" placeholder="Return Date (YYYY-MM-DD)" oninput="this.className = ''" name="returnDate"></p>
+    <p><input id="inputRTime" placeholder="Return Time (HH-MM-SS)" oninput="this.className = ''" name="returnTime"></p>
   </div>
   <div class="tab">location:
     <p><input placeholder="Address (e.g. 2132 Somerset Dr.)" oninput="this.className = ''" name="adress"></p>
@@ -194,6 +194,7 @@ function validateForm() {
   y = x[currentTab].getElementsByTagName("input");
   a = document.getElementById("inputEmail");
   b = document.getElementById("inputPhone");
+  c = document.getElementById("inputLDate");
   
     for (i = 0; i < y.length; i++) {
     
@@ -218,6 +219,7 @@ function validateForm() {
 	  b.className += " invalid";
 	  valid = false;
   }
+  
   
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
