@@ -196,15 +196,7 @@ function validateForm() {
   b = document.getElementById("inputPhone");
   c = document.getElementById("inputLDate");
   
-    for (i = 0; i < y.length; i++) {
     
-    if (y[i].value == "" ) {
-     
-      y[i].className += " invalid";
-    
-      valid = false;
-    }
-  }
   
   //validates email to check for "@" and "."
   if ((a.value.indexOf('@') > -1)&&(a.value.indexOf('.') > -1)){
@@ -220,6 +212,15 @@ function validateForm() {
 	  valid = false;
   }
   
+  for (i = 0; i < y.length; i++) {
+    
+    if (y[i].value == "" ) {
+     
+      y[i].className += " invalid";
+    
+      valid = false;
+    }
+  }
   
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
