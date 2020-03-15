@@ -104,22 +104,22 @@ button:hover {
   <div class="tab">Name:
      <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
     <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
-    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-    <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+    <p><input placeholder="user@website.com" oninput="this.className = ''" name="email"></p>
+    <p><input placeholder="999-999-9999" oninput="this.className = ''" name="phone"></p>
     
   </div>
   
     <div class="tab">Date of Residence's Absence
-    <p><input placeholder="leave date" oninput="this.className = ''" name="leaveDate"></p>
-    <p><input placeholder="leave time" oninput="this.className = ''" name="leaveTime"></p>
-    <p><input placeholder="return date" oninput="this.className = ''" name="returnDate"></p>
-    <p><input placeholder="return time" oninput="this.className = ''" name="returnTime"></p>
+    <p><input placeholder="Leave Date (YYYY-MM-DD)" oninput="this.className = ''" name="leaveDate"></p>
+    <p><input placeholder="Leave Time (HH-MM-SS)" oninput="this.className = ''" name="leaveTime"></p>
+    <p><input placeholder="Return Date (YYYY-MM-DD)" oninput="this.className = ''" name="returnDate"></p>
+    <p><input placeholder="Return Time (HH-MM-SS)" oninput="this.className = ''" name="returnTime"></p>
   </div>
   <div class="tab">location:
-    <p><input placeholder="Address" oninput="this.className = ''" name="adress"></p>
-    <p><input placeholder="city" oninput="this.className = ''" name="city"></p>
-    <p><input placeholder="state" oninput="this.className = ''" name="state"></p>
-    <p><input placeholder="zip code" oninput="this.className = ''" name="zip"></p>
+    <p><input placeholder="Address (e.g. 2132 Somerset Dr.)" oninput="this.className = ''" name="adress"></p>
+    <p><input placeholder="City (e.g. Rochester)" oninput="this.className = ''" name="city"></p>
+    <p><input placeholder="State (e.g. MI)" oninput="this.className = ''" name="state"></p>
+    <p><input placeholder="Zip Code (e.g. 48073)" oninput="this.className = ''" name="zip"></p>
   </div>
 
 
