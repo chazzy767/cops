@@ -102,14 +102,14 @@ button:hover {
   <h1>SIGN UP FOR A HOUSE CHECK:</h1>
   <h2>Please fill in all of the information to confirm you live at the current address and include any other informatoin you would like us to know about</h2>
   <div class="tab">Name:
-     <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
-    <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
-    <p><input placeholder="user@website.com" oninput="this.className = ''" name="email"></p>
-    <p><input placeholder="999-999-9999" oninput="this.className = ''" name="phone"></p>
+    <p><input id="inputFName" placeholder="First name..." oninput="this.className = ''" name="fname"></p>
+    <p><input id="inputLName" placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
+    <p><input id="inputEmail" placeholder="user@website.com" oninput="this.className = ''" name="email"></p>
+    <p><input id="inputPhone" placeholder="999-999-9999" oninput="this.className = ''" name="phone"></p>
     
   </div>
   
-    <div class="tab">Date of Residence's Absence
+   <div class="tab">Date of Residence's Absence
     <p><input placeholder="Leave Date (YYYY-MM-DD)" oninput="this.className = ''" name="leaveDate"></p>
     <p><input placeholder="Leave Time (HH-MM-SS)" oninput="this.className = ''" name="leaveTime"></p>
     <p><input placeholder="Return Date (YYYY-MM-DD)" oninput="this.className = ''" name="returnDate"></p>
@@ -189,18 +189,28 @@ function nextPrev(n) {
 
 function validateForm() {
   
-  var x, y, i, valid = true;
+  var x, y, i, a, b, c, d, valid = true;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
+  a = document.getElementById("inputEmail");
+  b = document.getElementById("inputPhone");
+  
     for (i = 0; i < y.length; i++) {
     
-    if (y[i].value == "") {
+    if (y[i].value == "" ) {
      
       y[i].className += " invalid";
     
       valid = false;
     }
   }
+  
+  //validates phone number for length of 12
+  if (b.value.length != 12){
+	  b.className += " invalid";
+	  valid = false;
+  }
+  
   
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
