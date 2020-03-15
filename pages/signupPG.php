@@ -204,12 +204,14 @@ function validateForm() {
   } else {
 	  valid = false;
 	  a.className += " invalid";
+	  alert("Emaill must contain \"@\", \".\", and be longer than 6 characters");
   }
   
   //validates phone number for length of 12
   if (b.value.length != 12){
 	  b.className += " invalid";
 	  valid = false;
+	  alert("Phone number must be 12 characters e.g. 999-999-9999");
   }
   
   for (i = 0; i < y.length; i++) {
