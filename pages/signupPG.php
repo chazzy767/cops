@@ -205,12 +205,19 @@ function validateForm() {
     }
   }
   
+  //validates email to check for "@" and "."
+  if ((a.value.indexOf('@') > -1)&&(a.value.indexOf('.') > -1)){
+	  valid = true;
+  } else {
+	  valid = false;
+	  a.className += " invalid";
+  }
+  
   //validates phone number for length of 12
   if (b.value.length != 12){
 	  b.className += " invalid";
 	  valid = false;
   }
-  
   
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
