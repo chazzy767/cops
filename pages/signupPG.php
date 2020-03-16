@@ -190,30 +190,9 @@ function nextPrev(n) {
 
 function validateForm() {
   
-  var x, y, i, a, b, c, d, valid = true;
+  var x, y, i, valid = true;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
-  a = document.getElementById("inputEmail");
-  b = document.getElementById("inputPhone");
-  c = document.getElementById("inputLDate");
-  
-    
-  
-  //validates email to check for "@" and "." and at least length of 7
-  if ((a.value.indexOf('@') > -1)&&(a.value.indexOf('.') > -1)&&(a.value.length > 6)){
-	  valid = true;
-  } else {
-	  valid = false;
-	  a.className += " invalid";
-	  alert("Emaill must contain \"@\", \".\", and be longer than 6 characters");
-  }
-  
-  //validates phone number for length of 12
-  if (b.value.length != 12){
-	  b.className += " invalid";
-	  valid = false;
-	  alert("Phone number must be 12 characters e.g. 999-999-9999");
-  }
   
   for (i = 0; i < y.length; i++) {
     

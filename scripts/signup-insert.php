@@ -16,6 +16,28 @@
  $ho_state = $_POST['state'];
  $ho_zip = $_POST['zip'];
  
+ $valid_flag = true;
+ 
+ //checks if string is less than 6 characters
+ //the minimum to contain @, domain, and .xxx
+ if(strlen($ho_email)<6){
+	 $valid_flag = false;
+ }
+ 
+ //checks for "@" symbol
+ if (strpos($ho_email, '@') == false) {
+     $valid_flag = false;
+	 echo "Email doesn't contain \"@\"";
+ }
+ 
+ //checks for .com, .edu, etc.
+ if (strpos($ho_email, '.') == false) {
+     $valid_flag = false;
+	 echo "Email doesn't contain top-level domain";
+ }
+ 
+ 
+ 
  #test echo to see if variables work
  #echo "Username: ".$ho_username;
  #echo "<br>";
