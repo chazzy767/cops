@@ -117,17 +117,17 @@ button:hover {
     <p><input id="inputRTime" placeholder="Return Time (HH-MM-SS)" oninput="this.className = ''" name="returnTime"></p>
   </div>
   <div class="tab">location:
-    <p><input placeholder="Address (e.g. 2132 Somerset Dr.)" oninput="this.className = ''" name="adress"></p>
-    <p><input placeholder="City (e.g. Rochester)" oninput="this.className = ''" name="city"></p>
-    <p><input placeholder="State (e.g. MI)" oninput="this.className = ''" name="state"></p>
-    <p><input placeholder="Zip Code (e.g. 48073)" oninput="this.className = ''" name="zip"></p>
+    <p><input placeholder="Address (e.g. 2132 Somerset Dr.)" oninput="this.className = ''" id= "address" name="adress"></p>
+    <p><input placeholder="City (e.g. Rochester)" oninput="this.className = ''" id="city" name="city"></p>
+    <p><input placeholder="State (e.g. MI)" oninput="this.className = ''" id="state" name="state"></p>
+    <p><input placeholder="Zip Code (e.g. 48073)" oninput="this.className = ''" id="zip" name="zip"></p>
   </div>
 
 
 
   <div class="tab">Login Info:
-    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-    <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+    <p><input placeholder="Username..." oninput="this.className = ''" id="username" name="uname"></p>
+    <p><input placeholder="Password..." oninput="this.className = ''" id="password" name="pword" type="password"></p>
   </div>
 
   <div style="overflow:auto;">

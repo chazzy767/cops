@@ -16,8 +16,8 @@
 			</div>
 
 		<div class="userNav">
-			<a href="../html/vacation.html">Add Vacation Dates</a><br>
-			<a href="../html/history.html">Previous House Checks</a>
+			<a href="../pages/addVacaPG.php">Add Vacation Dates</a><br>
+			<a href="../pages/historyPG.php">Previous House Checks</a>
 		</div>
 		</div>
 	</body>

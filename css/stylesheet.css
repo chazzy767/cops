@@ -241,3 +241,78 @@ p8{
 	color: lightblue;
 	text-decoration: underline;
 }
+.add{
+	grid-column: 3/8;
+	grid-row: 1/7;
+	margin-left: 75px;
+	padding: 20px;
+	line-height: 35px;
+	padding-right: 40px;
+	color:white;
+	background-color:#333;
+	border-radius:25px;
+	text-align:center;
+}
+#subBtn{
+	color:blue;
+	width:55px;
+	height:35px;
+	font-size:12px;
+	border-radius:15px;
+}
+#inputLDate{
+	border-radius:15px;
+	padding: 10px;
+}
+#inputLTime{
+	border-radius:15px;
+	padding: 10px;
+}
+#inputRDate{
+	border-radius:15px;
+	padding: 10px;
+}
+#inputRTime{
+	border-radius:15px;
+	padding: 10px;
+}
+#inputFName{
+	border-radius:15px;
+	padding: 10px;
+}
+#inputLName{
+	border-radius:15px;
+	padding: 10px;
+}
+#inputEmail{
+	border-radius:15px;
+	padding: 10px;
+}
+#inputPhone{
+	border-radius:15px;
+	padding: 10px;
+}
+#state{
+	border-radius:15px;
+	padding: 10px;
+}
+#address{
+	border-radius:15px;
+	padding: 10px;
+}
+#city{
+	border-radius:15px;
+	padding: 10px;
+}
+#zip{
+	border-radius:15px;
+	padding: 10px;
+}
+#username{
+	border-radius:15px;
+	padding: 10px;
+}
+#password{
+	border-radius:15px;
+	padding: 10px;
+}
