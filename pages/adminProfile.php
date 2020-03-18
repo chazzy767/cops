@@ -51,7 +51,7 @@
 			</div>
 		<link href="https://fonts.googleapis.com/css?family=Raleway" >
 		<div class="OfficerNav">
-			<a href="../html/history.html">Previous House Checks</a>
+			<a href="../pages/historyPG.php">Previous House Checks</a>
 		</div>
 		</div>
 	</body>

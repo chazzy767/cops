@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>History of House Checks for Admin </title>
+		<title>History of House Checks for User</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../css/stylesheet.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
