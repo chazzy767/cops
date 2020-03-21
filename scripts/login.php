@@ -7,7 +7,7 @@
  $myusername = $_POST['uname'];
 
  //Selects password and user type from row w/ entered username
- $sql = "SELECT ho_pw_hash, user_type FROM Homeowner WHERE ho_username = '{$myusername}'";
+ $sql = "SELECT ho_pw_hash, user_type, homeowner_id FROM Homeowner WHERE ho_username = '{$myusername}'";
  $query = mysqli_query($conn,$sql);
  $result = mysqli_fetch_assoc($query);
  
@@ -15,6 +15,7 @@
  $fetched_pw = $result['ho_pw_hash'];
  $mypassword = crypt($_POST['psw'],$fetched_pw);
  $user_type = $result['user_type'];
+	$user_id = $result['homeowner_id'];
  
  echo 'User Type: '.$user_type.'<br>';
  //Compares passwords
@@ -23,6 +24,7 @@
 	 session_start();
 	 $_SESSION["session_username"] = $myusername;
 	 $_SESSION["user_type"] = $user_type;
+		$_SESSION["session_user_id"] = $user_id;
 	 if ($user_type == "standard"){
 		 header("Refresh:3, url=http://www.secs.oakland.edu/~cmczerny/cops/pages/customerUI.php",
 	     true, 303);
