@@ -21,6 +21,7 @@
  //Compares passwords
   if (strcmp($mypassword,$fetched_pw)===0){
 	 echo "Login successful. Redirecting...";
+		//start storing user's info for session
 	 session_start();
 	 $_SESSION["session_username"] = $myusername;
 	 $_SESSION["user_type"] = $user_type;

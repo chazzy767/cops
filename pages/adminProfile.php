@@ -56,6 +56,7 @@
 		</div>
 		 <!-- Google Maps Div -->
 		 <div id="map">
+			</div>
 				<script>
 				 //Function to generate Google Map
 					function initMap() {
@@ -72,7 +73,6 @@
 				<script async defer
 					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzcm8v9SjlvxqJqnoQPOdS5zTYWp7MpMw&callback=initMap">
 				</script>
-			</div>
 		</div>
 	</body>
 </html>
