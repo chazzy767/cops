@@ -4,7 +4,8 @@
 		<title>Officer Profile</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../css/stylesheet.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<?php include("../scripts/sub-head.php"); ?>
 	</head>
 	<body>
 		 <?php include("../scripts/navbar-log-sub-user.php");?>
@@ -53,8 +54,10 @@
 		<div class="OfficerNav">
 			<a href="../pages/historyPG.php">Previous House Checks</a>
 		</div>
+		 <!-- Google Maps Div -->
 		 <div id="map">
 				<script>
+				 //Function to generate Google Map
 					function initMap() {
 					// The location of Uluru
 					var uluru = {lat: -25.344, lng: 131.036};

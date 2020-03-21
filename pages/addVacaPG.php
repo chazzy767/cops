@@ -19,7 +19,7 @@
 						<p><input id="inputRDate" placeholder="Return Date (YYYY-MM-DD)" name="returnDate"></p>
 						<p><input id="inputRTime" placeholder="Return Time (HH:MM:SS)" name="returnTime"></p>
 					</div>
-				<button type="submit" id="subBtn">Submit</button>
+				 <button type="submit" id="subBtn">Submit</button>
 				</div>
 			</div>
 		</form>

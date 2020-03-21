@@ -14,11 +14,10 @@
 				<p>Your House was most recently checked on:</p>
 				<p2> Thursday, March 5th 2020 at 9:30 am </p2>
 			</div>
-
-		<div class="userNav">
-			<a href="../pages/addVacaPG.php">Add Vacation Dates</a><br>
-			<a href="../pages/historyPGUser.php">Previous House Checks</a>
-		</div>
+			<div class="userNav">
+				<a href="../pages/addVacaPG.php">Add Vacation Dates</a><br>
+				<a href="../pages/historyPGUser.php">Previous House Checks</a>
+			</div>
 		</div>
 	</body>
 </html>
