@@ -53,6 +53,23 @@
 		<div class="OfficerNav">
 			<a href="../pages/historyPG.php">Previous House Checks</a>
 		</div>
+		 <div id="map">
+				<script>
+					function initMap() {
+					// The location of Uluru
+					var uluru = {lat: -25.344, lng: 131.036};
+					// The map, centered at Uluru
+					var map = new google.maps.Map(
+					document.getElementById('map'), {zoom: 4, center: uluru});
+					// The marker, positioned at Uluru
+					var marker = new google.maps.Marker({position: uluru, map: map});
+					}
+					initMap();
+				</script>
+				<script async defer
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzcm8v9SjlvxqJqnoQPOdS5zTYWp7MpMw&callback=initMap">
+				</script>
+			</div>
 		</div>
 	</body>
 </html>
