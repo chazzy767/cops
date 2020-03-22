@@ -26,6 +26,7 @@
 	 $_SESSION["session_username"] = $myusername;
 	 $_SESSION["user_type"] = $user_type;
 		$_SESSION["session_user_id"] = $user_id;
+		$_SESSION["logged_in"] = true;
 	 if ($user_type == "standard"){
 		 header("Refresh:3, url=http://www.secs.oakland.edu/~cmczerny/cops/pages/customerUI.php",
 	     true, 303);

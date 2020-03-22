@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<form action="../scripts/insert-vaca-dates.php" method="post">
-		<?php include("../scripts/navbar-log-sub-user.php");?>
+		<?php include("../scripts/navbar-logo.php");?>
 		<br>
 			<div class="container">
 				<div class="add">

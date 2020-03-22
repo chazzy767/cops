@@ -5,7 +5,7 @@
 		<?php include("../scripts/sub-head.php");?>
 	</head>
 	<body>	
-			<?php include("../scripts/navbar-log-sub.php"); ?>
+			<?php include("../scripts/navbar-logo.php");?>
 				<br>
 			</div> 
 			<div class="container">
