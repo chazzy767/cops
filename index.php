@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+	 <title>Home</title>
 		<?php include "scripts/head.php"; ?>
 	</head>
 	<body>
