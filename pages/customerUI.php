@@ -2,10 +2,10 @@
 <html lang="en">
 	<head>
 	 <title>User</title>
-		<?php include("../scripts/sub-head.php"); ?>
+		<?php include "../scripts/head.php"; ?>
 	</head>
 	<body>
-	 <?php include("../scripts/navbar-logo.php"); ?>	
+	 <?php include "../scripts/navbar-logo.php"; ?>	
 		<div class="container">
 			<div class="mainTXT3">
 				<h1> Welcome Back, <?php echo $_SESSION["session_username"];?>! </h1>

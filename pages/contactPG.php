@@ -2,11 +2,10 @@
 <html lang="en">
 	<head>
 		<title>Contact</title>
-		<?php include("../scripts/sub-head.php");?>
+		<?php include "../scripts/head.php";?>
 	</head>
 	<body>	
-			<?php include("../scripts/navbar-logo.php");?>
-				<br>
+			<?php include "../scripts/navbar-logo.php";?>
 			</div> 
 			<div class="container">
 			<div class="meet">

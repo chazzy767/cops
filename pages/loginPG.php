@@ -2,11 +2,11 @@
 <html>
 	<head>
 	 <title>Login</title>
-	 <?php include("../scripts/sub-head.php"); ?>
+	 <?php include "../scripts/head.php";?>
 	</head>
 	<body>
 	<form action="../scripts/login.php" method="post">
-	<?php include("../scripts/navbar-log-sub-login.php");?>
+	<?php include "../scripts/navbar-logo.php";?>
 	<br>
   <div class="container">
 	<div class="back">

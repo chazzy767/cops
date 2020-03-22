@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Officer Profile</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="../css/stylesheet.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<?php include("../scripts/sub-head.php"); ?>
+		<title>Admin Profile</title>
+		<?php include "../scripts/head.php"; ?>
 	</head>
 	<body>
-		 <?php include("../scripts/navbar-logo.php");?>
-		 <?php include("../scripts/connect-db.php");?>
-		 
+	  <!--adds nav bar and connects to db -->
+		 <?php include "../scripts/navbar-logo.php";?>
+		 <?php include "../scripts/connect-db.php";?>
 		<div class="container">
 			<div class="mainTXT2">
-				<h1> Welcome Back Officer! </h1> <p> Thank you for keeping our residents' homes safe!</p>
+				<h1> Welcome Back Admin! </h1> <p> Thank you for keeping your residents' homes safe!</p>
 				<p>Here are a list of homes that need to be checked today:</p>
 					<?php
 						//This creates the table of unchecked housechecks

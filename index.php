@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<?php include("scripts/head.php"); ?>
+		<?php include "scripts/head.php"; ?>
 	</head>
 	<body>
-		<?php include("scripts/navbar-logo.php"); ?>
+		<?php include "scripts/navbar-logo.php"; ?>
 		<div class="container">
 			<div class="mainTXT">
 				<h1> Going on Vacation? <br><br> Worried About Your House?</h1>

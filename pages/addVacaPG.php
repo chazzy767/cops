@@ -2,14 +2,11 @@
 <html>
  <head>
 		<title>Add a Vacation</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="../css/stylesheet.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<?php include("../scripts/sub-head.php"); ?>
+		<?php include "../scripts/head.php"; ?>
 	</head>
 	<body>
+	 <?php include "../scripts/navbar-logo.php";?>
 		<form action="../scripts/insert-vaca-dates.php" method="post">
-		<?php include("../scripts/navbar-logo.php");?>
 		<br>
 			<div class="container">
 				<div class="add">
