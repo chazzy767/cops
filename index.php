@@ -14,6 +14,5 @@
 					check on your house to make sure everything is great while you are away.</p>
 			</div>
 		</div>
-		
 	</body>
 </html>
