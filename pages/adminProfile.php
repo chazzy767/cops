@@ -24,9 +24,10 @@
 						<tr>
 						<th>First Name</th>
 						<th>Last Name</th>
-						<th>Address</th>
-						<th>Date Created</th>
-						<th>Leave Date</th>
+						<th>Address</th>";
+						//<th>Date Created</th>
+						echo 
+						"<th>Leave Date</th>
 						<th>Return Date</th>
 						</tr>";
 
@@ -36,7 +37,7 @@
 						echo "<td>" . $row['ho_fname'] . "</td>";
 						echo "<td>" . $row['ho_lname'] . "</td>";
 						echo "<td>" . $row['ho_address'] . "</td>";
-						echo "<td>" . $row['date_created'] . "</td>";
+						//echo "<td>" . $row['date_created'] . "</td>";
 						echo "<td>" . $row['leave_date'] . "</td>";
 						echo "<td>" . $row['return_date'] . "</td>";
 						echo "<td><button type=\"button\">Checked</button></td>";
@@ -48,9 +49,6 @@
 				   ?>
 			</div>
 		<link href="https://fonts.googleapis.com/css?family=Raleway" >
-		<div class="OfficerNav">
-			<a href="../pages/historyPG.php">Previous House Checks</a>
-		</div>
 		 <!-- Google Maps Div -->
 		 <div id="map">
 			</div>

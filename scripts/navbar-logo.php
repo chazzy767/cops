@@ -11,6 +11,7 @@
 		//If user is admin, add "admin page" button to nav
 		if ($_SESSION['user_type']=="admin"){
 			echo '<li style="float:right;"><a href="http://www.secs.oakland.edu/~cmczerny/cops/pages/adminProfile.php">Admin Page</a></li>';
+			echo '<li style="float:right;"><a href="http://www.secs.oakland.edu/~cmczerny/cops/pages/historyPG.php">Previous House Checks</a></li>';
 		} else {
 			 echo '<li style="float:right;"><a href="http://www.secs.oakland.edu/~cmczerny/cops/pages/customerUI.php">User Page</a></li>';
 			 echo '<li style="float:right;"><a href="http://www.secs.oakland.edu/~cmczerny/cops/pages/addVacaPG.php">Add House Check</a></li>';
