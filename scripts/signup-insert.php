@@ -1,4 +1,5 @@
 <?php
+ session_start();
  //connects to our OU COPS db
  include("../scripts/connect-db.php");
  //add functions php file

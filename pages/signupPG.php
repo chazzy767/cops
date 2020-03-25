@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

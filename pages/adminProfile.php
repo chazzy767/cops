@@ -1,6 +1,6 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="en">
- <?php session_start(); ?>
 	<head>
 		<title>Admin Profile</title>
 		<?php include "../scripts/head.php"; ?>

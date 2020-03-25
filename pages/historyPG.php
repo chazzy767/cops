@@ -1,6 +1,6 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
- <?php session_start(); ?>
 	<head>
 		<title>History of House Checks for Admin </title>
 		<?php include "../scripts/head.php"; ?>
