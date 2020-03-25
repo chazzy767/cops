@@ -18,6 +18,12 @@
 								die();
 						}
 					}
+					else {
+						//if user isn't logged in at all, deny access
+						echo "Permission denied. Log in as admin.";
+						mysqli_close($conn);	
+						die();
+					}
 	}
 	
 	//function to grant page access to CUSTOMERS ONLY
@@ -32,6 +38,12 @@
 						} else {
 							 //do nothing
 						}
+					}
+					else {
+						//if user isn't logged in at all, deny access
+						echo "Permission denied. Log in as customer.";
+						mysqli_close($conn);	
+						die();
 					}
 	}
 	

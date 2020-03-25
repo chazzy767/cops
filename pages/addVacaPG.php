@@ -6,6 +6,8 @@
 	</head>
 	<body>
 	 <?php include "../scripts/navbar-logo.php";?>
+		<?php include "../scripts/php-functions.php"; ?>
+  <?php grantCustomer(); ?>	
 		<form action="../scripts/insert-vaca-dates.php" method="post">
 		<br>
 			<div class="container">
