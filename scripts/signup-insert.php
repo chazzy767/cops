@@ -98,6 +98,6 @@
 		//Redirect to login with new account
 	 header( "Refresh:2; url=http://secs.oakland.edu/~cmczerny/cops/pages/loginPG.php",
 	 true, 303);
-     exit;
+  exit;
  }
 ?>

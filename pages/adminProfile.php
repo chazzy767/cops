@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+ <?php session_start(); ?>
 	<head>
 		<title>Admin Profile</title>
 		<?php include "../scripts/head.php"; ?>
@@ -45,6 +46,8 @@
 						//echo "<td>" . $row['date_created'] . "</td>";
 						echo "<td>" . $row['leave_date'] . "</td>";
 						echo "<td>" . $row['return_date'] . "</td>";
+						//checkboxes for row
+						//also creates array to store checkbox data in
 						echo "<td><input type=\"checkbox\" name=\"checkboxvar[]\" value=\"" . $row['check_id'] . "\"></td>";
 						echo "</tr>";
 						}

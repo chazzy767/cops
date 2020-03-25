@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+ <?php session_start(); ?>
  <head>
 		<title>Add a Vacation</title>
 		<?php include "../scripts/head.php"; ?>
