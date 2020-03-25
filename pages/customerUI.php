@@ -5,7 +5,9 @@
 		<?php include "../scripts/head.php"; ?>
 	</head>
 	<body>
-	 <?php include "../scripts/navbar-logo.php"; ?>	
+	 <?php include "../scripts/navbar-logo.php"; ?>
+  <?php include "../scripts/php-functions.php"; ?>
+  <?php grantCustomer(); ?>		
 		<div class="container">
 			<div class="mainTXT3">
 				<h1> Welcome Back, <?php echo $_SESSION["session_username"];?>! </h1>

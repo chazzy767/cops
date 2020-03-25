@@ -6,6 +6,7 @@
 	</head>
 	<body>
 		<?php include "scripts/navbar-logo.php"; ?>
+		<?php include "scripts/php-functions.php"; ?>
 		<div class="container">
 			<div class="mainTXT">
 				<h1> Going on Vacation? <br><br> Worried About Your House?</h1>

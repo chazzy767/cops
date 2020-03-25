@@ -9,7 +9,6 @@
 		 <?php include "../scripts/navbar-logo.php";?>
 		 <?php include "../scripts/connect-db.php";?>
 			<?php include "../scripts/php-functions.php";?>
-			<!--Checks to see if user is admin-->
 			<?php grantAdmin(); ?>
 		<div class="container">
 			<div class="mainTXT2">
