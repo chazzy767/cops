@@ -9,7 +9,6 @@
 		 <?php include "../scripts/navbar-logo.php";?>
 		 <?php include "../scripts/connect-db.php";?>
 			<?php include "../scripts/php-functions.php";?>
-			<!--Checks to see if user is admin-->
 			<?php grantAdmin(); ?>
 		<div class="container">
 			<div class="mainTXT2">
@@ -24,6 +23,7 @@
 						$result = mysqli_query($conn,$sql);
 						
 						//HOUSECHECK TABLE BEGINS
+						echo "<form method=\"post\" action=\"\">";
 						echo "<table>
 						<tr>
 						<th>First Name</th>
@@ -33,6 +33,7 @@
 						echo 
 						"<th>Leave Date</th>
 						<th>Return Date</th>
+						<th>Checked</th>
 						</tr>";
 						//loop to fill table with all results of query
 						while($row = mysqli_fetch_array($result))
@@ -44,12 +45,13 @@
 						//echo "<td>" . $row['date_created'] . "</td>";
 						echo "<td>" . $row['leave_date'] . "</td>";
 						echo "<td>" . $row['return_date'] . "</td>";
-						echo "<td><button type=\"button\">Checked</button></td>";
+						echo "<td><input type=\"checkbox\" value=\"" . $row['homeowner_id'] . "\"></td>";
 						echo "</tr>";
 						}
 						echo "</table>";
 						//END OF HOUSECHECK TABLE
-						
+						echo '<input type="submit" value="Submit Checks">';
+						echo "</form>";
 						mysqli_close($conn);		 
 				  ?>
 			</div>
