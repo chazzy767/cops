@@ -53,6 +53,8 @@
  if(!mysqli_query($conn,$sql)){
 	 echo "Homeowner info not inserted";
 	 echo "<br>";
+		mysqli_close($conn);
+		die();
  }else{ //else if query is executed, the following runs
 	 echo "<br>";
 	 echo "Homeowner info inserted";
@@ -86,13 +88,15 @@
  if(!mysqli_query($conn,$sql_housecheck)){
 	 echo "Housecheck info not inserted";
 	 echo "<br>";
-	 mysqli_close();
+	 mysqli_close($conn);
+		die();
+		//if user isn't logged in at all, deny access
  }else{ //else if query is executed, the following runs
 	 echo "<br>";
 	 echo "Housecheck info inserted";
 	 mysqli_close();
-	 $_SESSION["session_user_id"];
-	 header( "Refresh:2; url=http://secs.oakland.edu/~cmczerny/cops/pages/customerUI.php",
+		//Redirect to login with new account
+	 header( "Refresh:2; url=http://secs.oakland.edu/~cmczerny/cops/pages/loginPG.php",
 	 true, 303);
      exit;
  }
