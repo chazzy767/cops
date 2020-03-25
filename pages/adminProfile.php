@@ -23,7 +23,7 @@
 						$result = mysqli_query($conn,$sql);
 						
 						//HOUSECHECK TABLE BEGINS
-						echo "<form method=\"post\" action=\"\">";
+						echo "<form method=\"post\" action=\"../scripts/update-checks.php\">";
 						echo "<table>
 						<tr>
 						<th>First Name</th>
@@ -45,7 +45,7 @@
 						//echo "<td>" . $row['date_created'] . "</td>";
 						echo "<td>" . $row['leave_date'] . "</td>";
 						echo "<td>" . $row['return_date'] . "</td>";
-						echo "<td><input type=\"checkbox\" value=\"" . $row['homeowner_id'] . "\"></td>";
+						echo "<td><input type=\"checkbox\" name=\"checkboxvar[]\" value=\"" . $row['check_id'] . "\"></td>";
 						echo "</tr>";
 						}
 						echo "</table>";
