@@ -57,11 +57,11 @@ input.invalid {
 button {
   background-color: darkgray;
   color:blue;
-	width:75px;
-	height:45px;
-	font-size:12px;
-	border-radius:15px;
-	cursor: pointer;
+ width:75px;
+ height:45px;
+ font-size:12px;
+ border-radius:15px;
+ cursor: pointer;
 }
 
 
@@ -99,7 +99,7 @@ button:hover {
  <?php include "../scripts/head.php"; ?>
 </head>
 <body>
-	<?php include "../scripts/navbar-logo.php"; ?>	
+ <?php include "../scripts/navbar-logo.php"; ?> 
 <form id="regForm" action="../scripts/signup-insert.php" method="post">
   <h1>SIGN UP FOR A HOUSE CHECK:</h1>
   <h2>Please fill in all of the information to confirm you live at the current address and include any other informatoin you would like us to know about</h2>

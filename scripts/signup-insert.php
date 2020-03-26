@@ -22,19 +22,19 @@
  //checks if string is less than 6 characters
  //the minimum to contain @, domain, and .xxx
  if(strlen($ho_email)<6){
-	 $valid_flag = false;
+  $valid_flag = false;
  }
  
  //checks for "@" symbol
  if (strpos($ho_email, '@') == false) {
      $valid_flag = false;
-	 echo "Email doesn't contain \"@\"";
+  echo "Email doesn't contain \"@\"";
  }
  
  //checks for .com, .edu, etc.
  if (strpos($ho_email, '.') == false) {
      $valid_flag = false;
-	 echo "Email doesn't contain top-level domain";
+  echo "Email doesn't contain top-level domain";
  }
  
  
@@ -52,13 +52,13 @@
  
  //checks to see if query was executed/inserted
  if(!mysqli_query($conn,$sql)){
-	 echo "Homeowner info not inserted";
-	 echo "<br>";
-		mysqli_close($conn);
-		die();
+  echo "Homeowner info not inserted";
+  echo "<br>";
+  mysqli_close($conn);
+  die();
  }else{ //else if query is executed, the following runs
-	 echo "<br>";
-	 echo "Homeowner info inserted";
+  echo "<br>";
+  echo "Homeowner info inserted";
      echo "<br>";
  }
  
@@ -87,18 +87,18 @@
  '$chk_r_time')";
  
  if(!mysqli_query($conn,$sql_housecheck)){
-	 echo "Housecheck info not inserted";
-	 echo "<br>";
-	 mysqli_close($conn);
-		die();
-		//if user isn't logged in at all, deny access
+  echo "Housecheck info not inserted";
+  echo "<br>";
+  mysqli_close($conn);
+  die();
+  //if user isn't logged in at all, deny access
  }else{ //else if query is executed, the following runs
-	 echo "<br>";
-	 echo "Housecheck info inserted";
-	 mysqli_close();
-		//Redirect to login with new account
-	 header( "Refresh:2; url=http://secs.oakland.edu/~cmczerny/cops/pages/loginPG.php",
-	 true, 303);
+  echo "<br>";
+  echo "Housecheck info inserted";
+  mysqli_close();
+  //Redirect to login with new account
+  header( "Refresh:2; url=http://secs.oakland.edu/~cmczerny/cops/pages/loginPG.php",
+  true, 303);
   exit;
  }
 ?>
