@@ -6,16 +6,16 @@
  include("php-functions.php");
  
  //link php variables to form variables
- $ho_fname = $_POST['fname'];
- $ho_lname = $_POST['lname'];
- $ho_address = $_POST['adress'];
- $ho_email = $_POST['email'];
- $ho_username = $_POST['uname'];
+ $ho_fname = mysqli_real_escape_string($conn, $_POST['fname']);
+ $ho_lname = mysqli_real_escape_string($conn, $_POST['lname']);
+ $ho_address = mysqli_real_escape_string($conn, $_POST['adress']);
+ $ho_email = mysqli_real_escape_string($conn, $_POST['email']);
+ $ho_username = mysqli_real_escape_string($conn, $_POST['uname']);
  //password is hashed
- $ho_pw = crypt($_POST['pword']);
- $ho_city = $_POST['city'];
- $ho_state = $_POST['state'];
- $ho_zip = $_POST['zip'];
+ $ho_pw = mysqli_real_escape_string($conn, crypt($_POST['pword']));
+ $ho_city = mysqli_real_escape_string($conn, $_POST['city']);
+ $ho_state = mysqli_real_escape_string($conn, $_POST['state']);
+ $ho_zip = mysqli_real_escape_string($conn, $_POST['zip']);
  
  $valid_flag = true;
  
@@ -75,10 +75,10 @@
  echo "User ID: ".$fetched_id;
  
  //link housecheck fields to php values
- $chk_l_date = $_POST['leaveDate'];
- $chk_l_time = $_POST['leaveTime'];
- $chk_r_date = $_POST['returnDate'];
- $chk_r_time = $_POST['returnTime'];
+ $chk_l_date = mysqli_real_escape_string($conn, $_POST['leaveDate']);
+ $chk_l_time = mysqli_real_escape_string($conn, $_POST['leaveTime']);
+ $chk_r_date = mysqli_real_escape_string($conn, $_POST['returnDate']);
+ $chk_r_time = mysqli_real_escape_string($conn, $_POST['returnTime']);
  
  //sql to insert into housecheck table
  $sql_housecheck = "INSERT INTO Housecheck (homeowner_id,

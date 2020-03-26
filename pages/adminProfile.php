@@ -7,10 +7,11 @@
 	</head>
 	<body>
 	  <!--adds nav bar and connects to db -->
-		 <?php include "../scripts/navbar-logo.php";?>
-		 <?php include "../scripts/connect-db.php";?>
-			<?php include "../scripts/php-functions.php";?>
-			<?php grantAdmin(); ?>
+		 <?php include "../scripts/navbar-logo.php"; ?>
+		 <?php include "../scripts/connect-db.php"; ?>
+		 <?php session_start(); ?>
+		 <?php include "../scripts/php-functions.php"; ?>
+		 <?php grantAdmin(); ?>
 		<div class="container">
 			<div class="mainTXT2">
 				<h1> Welcome Back Admin! </h1> <p> Thank you for keeping your residents' homes safe!</p>

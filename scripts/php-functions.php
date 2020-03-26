@@ -1,4 +1,5 @@
 <?php
+ session_start();
  //redirects back to our homepage
  function redirectHome(){
      header("Refresh:3, url=http://www.secs.oakland.edu/~cmczerny/cops/",

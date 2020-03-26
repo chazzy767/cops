@@ -25,7 +25,7 @@
 	mysqli_close($conn);
 	
 	//redirect back to admin page
-	header( "Location: http://secs.oakland.edu/~cmczerny/cops/pages/adminProfile.php",
+	header( "Location: ../pages/adminProfile.php",
 	true, 303);
 	
 	//exit script
