@@ -12,7 +12,7 @@
 			//add functions php file
 			include("php-functions.php");
 			
-			$myusername = $_POST['uname'];
+			$myusername = mysqli_real_escape_string($conn, $_POST['uname']);
 
 			//Selects password and user type from row w/ entered username
 			$sql = "SELECT ho_pw_hash, user_type, homeowner_id FROM Homeowner WHERE ho_username = '{$myusername}'";
