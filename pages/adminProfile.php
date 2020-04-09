@@ -62,23 +62,43 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" >
    <!-- Google Maps Div -->
    <div id="map">
-   </div>
-    <script>
-     //Function to generate Google Map
-     function initMap() {
-     // The location of Uluru
-     var uluru = {lat: -25.344, lng: 131.036};
-     // The map, centered at Uluru
-     var map = new google.maps.Map(
-     document.getElementById('map'), {zoom: 4, center: uluru});
-     // The marker, positioned at Uluru
-     var marker = new google.maps.Marker({position: uluru, map: map});
-     }
-     initMap();
-    </script>
-    <script async defer
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzcm8v9SjlvxqJqnoQPOdS5zTYWp7MpMw&callback=initMap">
-    </script>
+					<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+					<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+					<script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
+					<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css"/>
+
+					<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+					<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
+					<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+					<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+					<script type="text/javascript">
+      window.onload = function() {
+        L.mapquest.key = 'XxcIZeWfqd8Q7LpWz1YivoaSI1r88P5m';
+
+        var map = L.mapquest.map('map', {
+          center: [37.7749, -122.4194],
+          layers: L.mapquest.tileLayer('map'),
+          zoom: 13,
+          zoomControl: false
+        });
+
+        L.control.zoom({
+          position: 'topright'
+        }).addTo(map);
+
+        L.mapquest.directionsControl({
+          routeSummary: {
+            enabled: false
+          },
+          narrativeControl: {
+            enabled: true,
+            compactResults: false
+          }
+        }).addTo(map);
+      }
+					</script>
+    </div>
   </div>
  </body>
 </html>
