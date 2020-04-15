@@ -11,6 +11,8 @@
  $ho_address = mysqli_real_escape_string($conn, $_POST['adress']);
  $ho_email = mysqli_real_escape_string($conn, $_POST['email']);
  $ho_username = mysqli_real_escape_string($conn, $_POST['uname']);
+	$ho_phone = mysqli_real_escape_string($conn, $_POST['phone']);
+	
  //password is hashed
  $ho_pw = mysqli_real_escape_string($conn, crypt($_POST['pword']));
  $ho_city = mysqli_real_escape_string($conn, $_POST['city']);
@@ -19,23 +21,28 @@
  
  $valid_flag = true;
  
- //checks if string is less than 6 characters
- //the minimum to contain @, domain, and .xxx
- if(strlen($ho_email)<6){
-  $valid_flag = false;
- }
+	//Validates email
+	if (!filter_var($ho_email, FILTER_VALIDATE_EMAIL)) {
+			echo "Error: Email is invalid";
+			$valid_flag = false;
+	}
+	
+	//validates phone number
+	if(preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $ho_phone)) {
+  //do nothing
+ } else {
+		$valid_flag = false;
+		echo "Error: Phone number is not valid.";
+	}
+	
+	//validates phone number
+	if(preg_match(“/^([0-9]{5})(-[0-9]{4})?$/i”,$ho_zip)) {
+  //do nothing
+ } else {
+		$valid_flag = false;
+		echo "Error: Zip code is not valid.";
+	}
  
- //checks for "@" symbol
- if (strpos($ho_email, '@') == false) {
-     $valid_flag = false;
-  echo "Error: Email doesn't contain \"@\"" . "<br>";
- }
- 
- //checks for .com, .edu, etc.
- if (strpos($ho_email, '.') == false) {
-     $valid_flag = false;
-  echo "Error: Email doesn't contain top-level domain" . "<br>";
- }
  
 	//if there are no errors, then insert data
 	if ($valid_flag == true){
@@ -59,6 +66,7 @@
 		header("Location: ../index.php",
   true, 303);
 	} else {
+		echo "Data not inserted as form contains errors. Please go back, correct, and re-submit";
 		mysqli_close($conn);
 	}	
 	
