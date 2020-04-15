@@ -23,7 +23,7 @@
  
 	//Validates email
 	if (!filter_var($ho_email, FILTER_VALIDATE_EMAIL)) {
-			echo "Error: Email is invalid";
+			echo "Error: Email is invalid" . "<br>";
 			$valid_flag = false;
 	}
 	
@@ -32,18 +32,29 @@
   //do nothing
  } else {
 		$valid_flag = false;
-		echo "Error: Phone number is not valid.";
+		echo "Error: Phone number is not valid." . "<br>";
 	}
 	
-	//validates phone number
-	if(preg_match(“/^([0-9]{5})(-[0-9]{4})?$/i”,$ho_zip)) {
+	//validates zip code
+	if(preg_match("/^([0-9]{5})(-[0-9]{4})?$/",$ho_zip)) {
   //do nothing
  } else {
 		$valid_flag = false;
-		echo "Error: Zip code is not valid.";
+		echo "Error: Zip code is not valid." . "<br>";
 	}
  
- 
+	//validates username
+ $sql_u = "SELECT * FROM Homeowner WHERE ho_username='$ho_username'";
+	$res_u = mysqli_query($conn,$sql_u);
+	
+	if (mysqli_num_rows($res_u) > 0){
+		$valid_flag = false;
+		echo "Error: Username is taken" . "<br>";
+	} else {
+		//do nothing
+	}
+			
+	
 	//if there are no errors, then insert data
 	if ($valid_flag == true){
 		//actual SQL code to put in our DB tables
