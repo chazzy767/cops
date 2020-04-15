@@ -17,11 +17,13 @@
     <h1> Welcome Back Admin! </h1> <p> Thank you for keeping your residents' homes safe!</p>
     <p>Here are a list of homes that need to be checked today:</p>
      <?php
+      
       //This creates the table of unchecked housechecks
       $sql = "SELECT * FROM Housecheck
               INNER JOIN Homeowner
               ON Housecheck.homeowner_id=Homeowner.homeowner_id
-              WHERE Housecheck.chk_value=\"no\"";
+              WHERE Housecheck.chk_value=\"no\"
+              AND Housecheck.leave_date= '$todays_date'";
       $result = mysqli_query($conn,$sql);
       
       //HOUSECHECK TABLE BEGINS
