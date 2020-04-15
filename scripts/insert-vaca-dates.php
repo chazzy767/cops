@@ -15,21 +15,40 @@
  $chk_r_date = mysqli_real_escape_string($conn, $_POST['returnDate']);
  $chk_r_time = mysqli_real_escape_string($conn, $_POST['returnTime']);
  
- //finds the user id for the new account
- $sql = "INSERT INTO Housecheck (homeowner_id,
-         leave_date,return_date,leave_time,return_time) VALUES 
-         ('$ho_id','$chk_l_date','$chk_r_date','$chk_l_time',
-         '$chk_r_time')";
- 
- 
- if(!mysqli_query($conn,$sql)){
-   echo "Vacation not inserted";
-   echo "<br>";
-   mysqli_close();
- } else{ //else if query is executed, the following runs
-    mysqli_close();
-    header("Location: ../pages/customerUI.php",
-    true, 303);
-    exit;
+	//function for creating range between leave and return dates
+	function dateRange($first, $last, $step = '+1 day', $format = 'Y-m-d') {
+
+	$dates = array();
+	$current = strtotime( $first );
+	$last = strtotime( $last );
+
+	while( $current <= $last ) {
+
+		$dates[] = date( $format, $current );
+		$current = strtotime( $step, $current );
+	}
+
+	return $dates;
  }
+	
+	//creates range using previous function
+	$vacation_range = dateRange($chk_l_date, $chk_r_date);
+	
+	//inserts housecheck dates for each date in range
+	foreach($vacation_range as $value){
+    $sql = "INSERT INTO Housecheck (homeowner_id,
+            leave_date,leave_time) VALUES 
+            ('$ho_id','$value','$chk_l_time')";
+				echo $value . "<br>";
+				if(!mysqli_query($conn,$sql)){
+     echo "Vacation date not inserted";
+     echo "<br>";
+    }else{
+			  //do nothing
+    }
+ }
+	mysqli_close($conn);
+ header("Location: ../pages/customerUI.php",
+ true, 303);
+	exit();
 ?>

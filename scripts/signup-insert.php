@@ -28,20 +28,14 @@
  //checks for "@" symbol
  if (strpos($ho_email, '@') == false) {
      $valid_flag = false;
-  echo "Email doesn't contain \"@\"";
+  echo "Error: Email doesn't contain \"@\"" . "<br>";
  }
  
  //checks for .com, .edu, etc.
  if (strpos($ho_email, '.') == false) {
      $valid_flag = false;
-  echo "Email doesn't contain top-level domain";
+  echo "Error: Email doesn't contain top-level domain" . "<br>";
  }
- 
- 
- 
- #test echo to see if variables work
- #echo "Username: ".$ho_username;
- #echo "<br>";
  
  //actual SQL code to put in our DB tables
  $sql = "INSERT INTO Homeowner (ho_fname,
@@ -52,53 +46,12 @@
  
  //checks to see if query was executed/inserted
  if(!mysqli_query($conn,$sql)){
-  echo "Homeowner info not inserted";
-  echo "<br>";
-  mysqli_close($conn);
-  die();
+  //echo "Account info not inserted";
  }else{ //else if query is executed, the following runs
-  echo "<br>";
-  echo "Homeowner info inserted";
-     echo "<br>";
+  //echo "<br>";
+  //echo "Account info inserted";
+  //echo "<br>";
  }
- 
- //finds the user id for the new account
- $sql2 = "SELECT homeowner_id FROM Homeowner WHERE ho_username = 
- '{$ho_username}'";
- $query2 = mysqli_query($conn,$sql2);
- $id_result = mysqli_fetch_assoc($query2);
- 
- $fetched_id = $id_result['homeowner_id'];
-
- 
- //echoes user id
- echo "User ID: ".$fetched_id;
- 
- //link housecheck fields to php values
- $chk_l_date = mysqli_real_escape_string($conn, $_POST['leaveDate']);
- $chk_l_time = mysqli_real_escape_string($conn, $_POST['leaveTime']);
- $chk_r_date = mysqli_real_escape_string($conn, $_POST['returnDate']);
- $chk_r_time = mysqli_real_escape_string($conn, $_POST['returnTime']);
- 
- //sql to insert into housecheck table
- $sql_housecheck = "INSERT INTO Housecheck (homeowner_id,
- leave_date,return_date,leave_time,return_time) VALUES 
- ('$fetched_id','$chk_l_date','$chk_r_date','$chk_l_time',
- '$chk_r_time')";
- 
- if(!mysqli_query($conn,$sql_housecheck)){
-  echo "Housecheck info not inserted";
-  echo "<br>";
-  mysqli_close($conn);
-  die();
-  //if user isn't logged in at all, deny access
- }else{ //else if query is executed, the following runs
-  echo "<br>";
-  echo "Housecheck info inserted";
-  mysqli_close();
-  //Redirect to login with new account
-  header( "Refresh:2; url=http://secs.oakland.edu/~cmczerny/cops/pages/loginPG.php",
-  true, 303);
-  exit;
- }
+	mysqli_close($conn);
+	
 ?>

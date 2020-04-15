@@ -108,23 +108,14 @@ button:hover {
     <p><input id="inputLName" placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
     <p><input id="inputEmail" placeholder="user@website.com" oninput="this.className = ''" name="email"></p>
     <p><input id="inputPhone" placeholder="999-999-9999" oninput="this.className = ''" name="phone"></p>
-    
   </div>
   
-   <div class="tab">Date of Residence's Absence
-    <p><input id="inputLDate" placeholder="Leave Date (YYYY-MM-DD)" oninput="this.className = ''" name="leaveDate"></p>
-    <p><input id="inputLTime" placeholder="Leave Time (HH-MM-SS)" oninput="this.className = ''" name="leaveTime"></p>
-    <p><input id="inputRDate" placeholder="Return Date (YYYY-MM-DD)" oninput="this.className = ''" name="returnDate"></p>
-    <p><input id="inputRTime" placeholder="Return Time (HH-MM-SS)" oninput="this.className = ''" name="returnTime"></p>
-  </div>
-  <div class="tab">location:
+  <div class="tab">Location:
     <p><input placeholder="Address (e.g. 2132 Somerset Dr.)" oninput="this.className = ''" id= "address" name="adress"></p>
     <p><input placeholder="City (e.g. Rochester)" oninput="this.className = ''" id="city" name="city"></p>
     <p><input placeholder="State (e.g. MI)" oninput="this.className = ''" id="state" name="state"></p>
     <p><input placeholder="Zip Code (e.g. 48073)" oninput="this.className = ''" id="zip" name="zip"></p>
   </div>
-
-
 
   <div class="tab">Login Info:
     <p><input placeholder="Username..." oninput="this.className = ''" id="username" name="uname"></p>
@@ -142,8 +133,6 @@ button:hover {
     <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>
-    <span class="step"></span>
-    
   </div>
 </form>
 
