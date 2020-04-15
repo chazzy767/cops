@@ -37,21 +37,29 @@
   echo "Error: Email doesn't contain top-level domain" . "<br>";
  }
  
- //actual SQL code to put in our DB tables
- $sql = "INSERT INTO Homeowner (ho_fname,
- ho_lname,ho_address,ho_email,ho_username,ho_pw_hash,
- ho_city,ho_state,ho_zip) VALUES ('$ho_fname',
- '$ho_lname','$ho_address','$ho_email','$ho_username',
- '$ho_pw','$ho_city','$ho_state','$ho_zip')";
- 
- //checks to see if query was executed/inserted
- if(!mysqli_query($conn,$sql)){
-  //echo "Account info not inserted";
- }else{ //else if query is executed, the following runs
-  //echo "<br>";
-  //echo "Account info inserted";
-  //echo "<br>";
- }
-	mysqli_close($conn);
+	//if there are no errors, then insert data
+	if ($valid_flag == true){
+		//actual SQL code to put in our DB tables
+		$sql = "INSERT INTO Homeowner (ho_fname,
+		ho_lname,ho_address,ho_email,ho_username,ho_pw_hash,
+		ho_city,ho_state,ho_zip) VALUES ('$ho_fname',
+		'$ho_lname','$ho_address','$ho_email','$ho_username',
+		'$ho_pw','$ho_city','$ho_state','$ho_zip')";
+		
+		//checks to see if query was executed/inserted
+		if(!mysqli_query($conn,$sql)){
+			//echo "Account info not inserted";
+		} else { //else if query is executed, the following runs
+			//echo "<br>";
+			//echo "Account info inserted";
+			//echo "<br>";
+			
+		}
+		mysqli_close($conn);
+		header("Location: ../index.php",
+  true, 303);
+	} else {
+		mysqli_close($conn);
+	}	
 	
 ?>
