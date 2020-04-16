@@ -32,6 +32,7 @@
       <th>Check ID</th>
       <th>Check Completed</th>
       <th>Completed By</th>
+      <th>Comment</th>
       </tr>";
       //<th>Date Created</th>
       //loop to fill table with all results of query
@@ -42,6 +43,7 @@
        echo "<td>" . $row['chk_at'] . "</td>";
        //Concatenates checker first and last name
        echo "<td>" . $row['ho_fname'] . " " . $row['ho_lname'] . "</td>";
+       echo "<td>" . $row['chk_comment'] . "</td>";
        echo "</tr>";
       }
       echo "</table>";
