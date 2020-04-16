@@ -29,8 +29,7 @@
       //HOUSECHECK HISTORY TABLE BEGINS
       echo "<table>
       <tr>
-      <th>Leave Date</th>
-      <th>Return Date</th>
+      <th>Check ID</th>
       <th>Check Completed</th>
       <th>Completed By</th>
       </tr>";
@@ -39,8 +38,7 @@
       while($row = mysqli_fetch_array($result))
       {
        echo "<tr>";
-       echo "<td>" . $row['leave_date'] . "</td>";
-       echo "<td>" . $row['return_date'] . "</td>";
+       echo "<td>" . $row['check_id'] . "</td>";
        echo "<td>" . $row['chk_at'] . "</td>";
        //Concatenates checker first and last name
        echo "<td>" . $row['ho_fname'] . " " . $row['ho_lname'] . "</td>";

@@ -15,9 +15,9 @@
     <div class="add">
      <div class="tab">Date of Residence's Absence
       <p><input id="inputLDate" placeholder="Leave Date (YYYY-MM-DD)" name="leaveDate"></p>
-      <p><input id="inputLTime" placeholder="Leave Time (HH:MM:SS)" name="leaveTime"></p>
+      <p><input id="inputLTime" placeholder="Leave Time (HH:MM)" name="leaveTime"></p>
       <p><input id="inputRDate" placeholder="Return Date (YYYY-MM-DD)" name="returnDate"></p>
-      <p><input id="inputRTime" placeholder="Return Time (HH:MM:SS)" name="returnTime"></p>
+      <p><input id="inputRTime" placeholder="Return Time (HH:MM)" name="returnTime"></p>
      </div>
      <button type="submit" id="subBtn">Submit</button>
     </div>
