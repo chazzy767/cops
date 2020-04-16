@@ -53,7 +53,7 @@
       //checkboxes for row
       //also creates array to store checkbox data in
       echo "<td><input type=\"checkbox\" name=\"checkboxvar[]\" value=\"" . $row['check_id'] . "\"></td>";
-      echo "<td><input class='comment' type='text' name='comment_field' placeholder='Add a comment'</td>";
+      echo "<td><input type='text' name='comment_field[]'</td>";
       echo "</tr>";
       }
       echo "</table>";
