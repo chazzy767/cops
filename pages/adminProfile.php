@@ -18,6 +18,8 @@
     <p>Here are a list of homes that need to be checked today:</p>
      <?php
       
+      $todays_date = date("Y-m-d");
+      
       //This creates the table of unchecked housechecks
       $sql = "SELECT * FROM Housecheck
               INNER JOIN Homeowner
@@ -35,9 +37,9 @@
       <th>Address</th>";
       //<th>Date Created</th>
       echo 
-      "<th>Leave Date</th>
-      <th>Return Date</th>
+      "<th>Check Date</th>
       <th>Checked</th>
+      <th>Comment</th>
       </tr>";
       //loop to fill table with all results of query
       while($row = mysqli_fetch_array($result))
@@ -48,10 +50,10 @@
       echo "<td>" . $row['ho_address'] . "</td>";
       //echo "<td>" . $row['date_created'] . "</td>";
       echo "<td>" . $row['leave_date'] . "</td>";
-      echo "<td>" . $row['return_date'] . "</td>";
       //checkboxes for row
       //also creates array to store checkbox data in
       echo "<td><input type=\"checkbox\" name=\"checkboxvar[]\" value=\"" . $row['check_id'] . "\"></td>";
+      echo "<td><input class='comment' type='text' name='comment_field' placeholder='Add a comment'</td>";
       echo "</tr>";
       }
       echo "</table>";
@@ -64,17 +66,17 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" >
    <!-- Google Maps Div -->
    <div id="map">
-					<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
-					<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
-					<script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
-					<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css"/>
+     <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+     <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+     <script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
+     <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css"/>
 
-					<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
-					<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+     <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+     <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
 
-					<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
-					<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
-					<script type="text/javascript">
+     <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+     <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+     <script type="text/javascript">
       window.onload = function() {
         L.mapquest.key = 'XxcIZeWfqd8Q7LpWz1YivoaSI1r88P5m';
 
@@ -99,8 +101,8 @@
           }
         }).addTo(map);
       }
-					</script>
-    </div>
+    </script>
+   </div>
   </div>
  </body>
 </html>
